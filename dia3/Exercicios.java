@@ -69,12 +69,13 @@ public class Exercicios {
     public static void exercicio2(){
 
         Scanner in = new Scanner(System.in);
-        int fat=1;
+
 
         System.out.println("Digite o numero que deseja fatorar: ");
          int num = in.nextInt();
+         int fat=1;
 
-         for(int i=1; i<num; i++){
+         for(int i=num; i>1; i--){
 
              fat = fat * i;
 
