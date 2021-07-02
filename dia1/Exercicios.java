@@ -86,9 +86,11 @@ public class Exercicios {
     }
 
 
+
+
     public static void main(String[] args) {
 
-        exercicio4();
+        exercicio1();
 
     }
 
