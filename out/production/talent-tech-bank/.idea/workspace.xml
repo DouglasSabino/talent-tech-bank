@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="732f3276-3bb2-4bb5-88eb-dadc0c2ff58b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/talent-tech-bank/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/talent-tech-bank/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/talent-tech-bank/testes/testes.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,23 +38,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../IntelliJ.Portuguese.Brazil.Dictionary-master/portuguese-brazil_without-accents.dic" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
-  <component name="RunManager" selected="Application.exercicios (1)">
-    <configuration name="Exercicios (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dia3.Exercicios" />
-      <module name="talent-tech-bank" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dia3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Exercicios (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dia4.Exercicios" />
       <module name="talent-tech-bank" />
@@ -66,12 +56,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="exercicios (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dia6.exercicios" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dia7.Main" />
       <module name="talent-tech-bank" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dia6.*" />
+          <option name="PATTERN" value="dia7.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -79,12 +69,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="exercicios" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dia5.exercicios" />
+    <configuration name="Pessoas" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dia7.Pessoas" />
       <module name="talent-tech-bank" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dia5.*" />
+          <option name="PATTERN" value="dia7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="exercicios (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dia6.exercicios" />
+      <module name="talent-tech-bank" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dia6.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,11 +110,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Pessoas" />
         <item itemvalue="Application.exercicios (1)" />
         <item itemvalue="Application.testes" />
         <item itemvalue="Application.Exercicios (2)" />
-        <item itemvalue="Application.exercicios" />
-        <item itemvalue="Application.Exercicios (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -137,5 +140,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/talent_tech_bank$pessoas.ic" NAME="pessoas Coverage Results" MODIFIED="1625803181173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>dia7.*</FILTER>
+    </SUITE>
   </component>
 </project>
