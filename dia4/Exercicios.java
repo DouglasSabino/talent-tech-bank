@@ -1,4 +1,4 @@
-package dia4;
+package dia3;
 
 import java.util.Scanner;
 
@@ -8,151 +8,88 @@ public class Exercicios {
 
         Scanner in = new Scanner(System.in);
 
-        System.out.print("Digite um valor: ");
-          int valor = in.nextInt();
+        int vetor[] = new int[10];
+        int maiorNum=0, menorNum=0, soma=0;
+        float media=0;
 
-        System.out.print("A quanto deseja eleva-lo: ");
-          int eleva = in.nextInt();
+        for(int i=0,pos=1; i < 10; i++,pos++){
 
-        int result = 1;
-
-        for (int i =1; i <= eleva; i++){
-
-            result = result * valor;
+            System.out.print("Digite o " + pos +"° numero: ");
+            vetor[i] = in.nextInt();
 
         }
 
-        System.out.println("O Resultado é: " + result);
+
+
+        for(int x=1; x<10 ; x++){
+
+            if(vetor[x] > vetor[maiorNum]){
+
+                maiorNum = x;
+
+            }
+
+
+        }
+
+
+
+
+
+        for(int x=1; x<10 ; x++){
+
+            if(vetor[x] < vetor[menorNum]){
+
+                menorNum = x;
+
+            }
+
+
+        }
+
+
+
+        for(int i=0; i<10; i++){
+
+            soma = soma + vetor[i];
+
+
+        }
+
+        media = (float) soma/10;
+
+        System.out.println("O Maior numero é: "+ vetor[maiorNum]);
+        System.out.println("O Menor numero é: "+ vetor[menorNum]);
+        System.out.println("A Media é: " + media);
 
         in.close();
 
     }
 
-    public static void exercicio2a(){
+    public static void exercicio2(){
 
-    for(int i=0; i<=3 ; i++){
+        Scanner in = new Scanner(System.in);
 
-        System.out.println("* * * * * * * * * *");
 
-       }
+        System.out.println("Digite o numero que deseja fatorar: ");
+         int num = in.nextInt();
+         int fat=1;
 
-    }
+         for(int i=num; i>1; i--){
 
-    public static void exercicio2b(){
-        int linhas = 5;
-
-        for(int i=0; i<linhas ; i++){
-
-            for(int j=0; j<=i ; j++){
-
-                System.out.print("*");
-
-              }
-
-            System.out.println("\n");
+             fat = fat * i;
 
          }
 
-    }
+        System.out.println(fat);
 
-    public static void exercicio2c(){
-
-        int linhas = 5;
-
-        for(int i=1; i<=linhas ; i++){
-
-            int x = linhas - i;
-
-            while(x>0){
-
-                System.out.print(" ");
-                x--;
-            }
-
-            for(int j=1; j<=i ; j++){
-
-                System.out.print("*");
-
-            }
-
-            System.out.println("\n");
-
-        }
-
-    }
-
-    public static void exercicio2d(){
-
-        int linhas = 5;
-
-        for (int i = 1; i <= linhas; i++) {
-
-            int espacos = linhas - i;
-
-            while (espacos > 0) {
-                System.out.print("  ");
-                espacos--;
-            }
-
-            int k = 0;
-            while (k != (2 * i) - 1) {
-                System.out.print("* ");
-                k++;
-            }
-
-            System.out.print("\n");
-        }
-
-       }
-
-       public static void exercicio2e(){
-
-           int linhas = 5;
-
-           for (int i = 1; i <= linhas; i++) {
-
-               int espacos = linhas - i;
-
-               while (espacos > 0) {
-                   System.out.print("  ");
-                   espacos--;
-               }
-
-               int k = 0;
-               while (k != 2 * i - 1) {
-                   System.out.printf("%d ", i);
-                   k++;
-               }
-
-               System.out.print("\n");
-           }
-
-
-          }
-
-    public static void exercicio2f(){
-
-        int linhas = 5;
-        System.out.println("");
-        for (int i = 1; i <= linhas; i++) {
-            for (int j = 1; j <= (linhas - i) * 2; j++) {
-                System.out.print(" ");
-            }
-            for (int x = i; x >= 1; x--) {
-                System.out.print(" " + x);
-            }
-            for (int l = 2; l <= i; l++) {
-                System.out.print(" " + l);
-            }
-            System.out.println();
-        }
-
+         in.close();
 
     }
 
     public static void main(String[] args) {
 
-        exercicio2f();
+    exercicio2();
 
     }
 

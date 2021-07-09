@@ -1,206 +1,71 @@
-package dia6;
+package dia5;
 
-import javax.xml.bind.SchemaOutputResolver;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 public class exercicios {
 
-
     public static void exercicio1(){
-        Scanner in = new Scanner(System.in);
-       int[] vetor = new int[5];
 
-       for(int i=0,pos=1 ; i<vetor.length ; i++, pos++){
+     Scanner in = new Scanner(System.in);
+     int[] vetor;
 
-           System.out.print("Digite o "+pos+"° numero: ");
-                vetor[i] = in.nextInt();
+        System.out.print("Preencher vetor até: ");
+         int num = in.nextInt();
+         vetor = new int[num];
 
-                }
-       for (int num : vetor){
+        for(int i=0; i<num; i++){
 
-           System.out.print(num + "|");
-
-       }
-
-       in.close();
-
-       }
-
-    public static void exercicios2(){
-
-        Scanner in = new Scanner(System.in);
-        List<Integer> lista = new ArrayList<>();
-
-        for(int i=0,pos=1 ; i<5 ; i++, pos++){
-
-            System.out.print("Digite o "+pos+"° numero: ");
-            int num = in.nextInt();
-            lista.add(num);
+            vetor[i] = i+1;
 
         }
 
-        int qtdNeg = 0;
+        for(int i=vetor.length-1;i>=0; i--){
 
-        for (int num: lista){
-
-
-              if(num < 0){
-
-                  qtdNeg++;
-
-              }
-
-
+            System.out.print(vetor[i] + "|");
 
         }
-
-        System.out.print("Foram passados "+ qtdNeg + " numeros negativos!!");
 
         in.close();
 
        }
 
-    public static void exercicio3() {
+    public static void exercicio2(){
 
-        Scanner in = new Scanner(System.in);
-        List<Integer> lista = new ArrayList<>();
+        int[] desordenado = {60, 5, 3, 8, 1};
+        int aux;
 
-        for (int i = 0, pos = 1; i < 5; i++, pos++) {
+        for(int i = 1; i < desordenado.length ; i++){
 
-            System.out.print("Digite o " + pos + "° numero: ");
-            int num = in.nextInt();
-            lista.add(num);
+            for(int x = 0; x < desordenado.length - 1; x++){
 
-        }
+                if (desordenado[x] > desordenado[x+1]){
 
-        int qtdPares = 0;
-
-        for (int num : lista) {
-
-
-            if ((num % 2) == 0) {
-
-                qtdPares++;
-
-            }
-
-
-        }
-
-        System.out.print("Foram passados "+ qtdPares + " numeros pares!!");
-
-        in.close();
-
-    }
-
-    public static void exercicios4(){
-
-        Scanner in = new Scanner(System.in);
-        List<Integer> lista = new ArrayList<>();
-
-        for (int i = 0, pos = 1; i < 5; i++, pos++) {
-
-            System.out.print("Digite o " + pos + "° numero: ");
-            int num = in.nextInt();
-            lista.add(num);
-
-        }
-
-
-
-    }
-
-    public static void exercicios5() {
-
-        Scanner in = new Scanner(System.in);
-        int vidas = 10;
-        boolean chute = false;
-
-        System.out.print("Digite a palavra para ser adivinhada: ");
-        char [] palavra = in.next().toCharArray();
-        boolean[] palavraDescoberta = new boolean[palavra.length];
-        int letrasAcertadas = 0;
-        System.out.println();
-
-
-        while(vidas>0){
-
-            System.out.print("Digite uma letra: ");
-            char letra = in.next().charAt(0);
-
-            for(int i=0; i<palavra.length ; i++){
-
-                if(palavra[i] == letra){
-
-                    palavraDescoberta[i] = true;
-                    chute = true;
-                    letrasAcertadas++;
+                    aux = desordenado[x+1];
+                    desordenado[x+1] = desordenado[x];
+                    desordenado[x] = aux;
 
                 }
 
             }
 
-            if(chute == false){
-
-                System.out.println("Letra não encontrada!!!");
-                --vidas;
-                System.out.println("voce ainda tem "+ vidas + " chances !!");
-
-
-            }
-
-
-            for(int x=0; x<palavra.length ; x++){
-
-                if(palavraDescoberta[x] == true){
-
-                    System.out.print(palavra[x]);
-
-                }else {
-
-                    System.out.print("_");
-
-                }
-
-            }
-
-            System.out.println();
-            chute = false;
-
-            if(letrasAcertadas == palavra.length){
-
-                System.out.println("Parabens voce acertou a palavra !!");
-                System.exit(0);
-
-            }
 
 
         }
 
+        for(int x=0; x<desordenado.length; x++){
 
-
-
-
-        if(vidas == 0){
-
-            System.out.println("voce perdeu");
+            System.out.print(desordenado[x] + "|");
 
         }
 
+       }
 
-        in.close();
-
-    }
 
     public static void main(String[] args) {
 
-        exercicios5();
+        exercicio2();
 
+    }
 
-        }
 
 }

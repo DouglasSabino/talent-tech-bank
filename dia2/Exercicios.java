@@ -1,26 +1,22 @@
-package dia2;
-
+package dia1;
 import java.util.Scanner;
 
 public class Exercicios {
-
 
     public static void exercicio1(){
 
         Scanner in = new Scanner(System.in);
 
-        System.out.print("Digite um numero: ");
-        int num = in.nextInt();
+        int y = 99;
+        int z = 11;
+        int aux = 0;
 
-        if(num%2 == 0){
+        aux = y;
+        y = z;
+        z = aux;
 
-            System.out.println("Numero Par");
-
-        }else{
-
-            System.out.println("Numero Impar");
-
-        }
+        System.out.println(y);
+        System.out.println(z);
 
         in.close();
 
@@ -30,30 +26,10 @@ public class Exercicios {
 
         Scanner in = new Scanner(System.in);
 
-        System.out.print("Digite a idade do nadador: ");
-        int idade = in.nextInt();
+        System.out.print("Digite um numero: ");
+         int num = in.nextInt();
 
-        if(idade>=5 && idade<=7){
-
-            System.out.print("infantil A");
-
-        }else if(idade>=8 && idade<=11){
-
-            System.out.print("infantil B");
-
-        }else if(idade>=12 && idade<=13){
-
-            System.out.println("juvenil A");
-
-        }else if(idade>=14 && idade<=17){
-
-            System.out.println("juvenil B");
-
-        } else if(idade >= 18){
-
-            System.out.println("Adultos");
-
-        }
+        System.out.print("Seu antencessor é: " + --num);
 
         in.close();
 
@@ -63,238 +39,61 @@ public class Exercicios {
 
         Scanner in = new Scanner(System.in);
 
-        System.out.print("Digite o primeiro numero: ");
-         int pNum = in.nextInt();
+        System.out.print("Digite a base do retangulo: ");
+        int base = in.nextInt();
 
-        System.out.print("Digite o primeiro numero: ");
-         int sNum = in.nextInt();
+        System.out.print("Digite a altura do retangulo: ");
+        int altura = in.nextInt();
 
-        if(pNum == sNum){
+        int area = base * altura;
 
-            System.out.println("Os numeros são iguais");
+        System.out.print("A Area do retangulo é: " + area);
 
-        }else if(pNum > sNum){
+        in.close();
 
-            System.out.println("O Primeiro numero é maior");
-
-        }else{
-
-            System.out.println("O Segunda numero é maior");
-
-        }
-
-         in.close();
 
     }
 
     public static void exercicio4(){
 
         Scanner in = new Scanner(System.in);
+        float pVB, pVN, pVV;
 
-        int vetor[] = new int[10];
-        int maiorNum=0, menorNum=0, soma=0;
-        float media=0;
+        System.out.print("Digite o numero total de Eleitores: ");
+        int numEleitores = in.nextInt();
 
-        for(int i=0,pos=1; i < 10; i++,pos++){
+        System.out.print("Digite o numero de votos em branco: ");
+        int numVotosBrancos = in.nextInt();
 
-            System.out.print("Digite o " + pos +"° numero: ");
-            vetor[i] = in.nextInt();
+        System.out.print("Digite o numero de votos nulos: ");
+        int numVotosNulos = in.nextInt();
 
-        }
+        pVB = (float) ((numVotosBrancos*100)/numEleitores);
 
+        pVN = (float) ((numVotosNulos*100)/numEleitores);
 
+        pVV = (float) (((numEleitores - numVotosBrancos - numVotosNulos) * 100)/numEleitores);
 
-            for(int x=1; x<10 ; x++){
-
-                if(vetor[x] > vetor[maiorNum]){
-
-                    maiorNum = x;
-
-                }
-
-
-            }
-
-
-
-
-
-        for(int x=1; x<10 ; x++){
-
-            if(vetor[x] < vetor[menorNum]){
-
-                menorNum = x;
-
-            }
-
-
-        }
-
-
-
-        for(int i=0; i<10; i++){
-
-            soma = soma + vetor[i];
-
-
-        }
-
-          media = (float) soma/10;
-
-        System.out.println("O Maior numero é: "+ vetor[maiorNum]);
-        System.out.println("O Menor numero é: "+ vetor[menorNum]);
-        System.out.println("A Media é: " + media);
-
-        in.close();
-
-    }
-
-    public static void exercicio5(){
-
-        Scanner in = new Scanner(System.in);
-        System.out.println("1- Adição");
-        System.out.println("2- Subtração");
-        System.out.println("3- Multiplicação");
-        System.out.println("4- Divisão");
         System.out.println("");
 
-        System.out.print("Selecione a operação: ");
-        int opc = in.nextInt();
-
-        switch (opc){
-
-            case 1:
-
-                System.out.print("Primeiro numero: ");
-                int primeiro = in.nextInt();
-
-                System.out.print("Segundo numero: ");
-                int segundo = in.nextInt();
-
-                int resultado = primeiro + segundo;
-
-                System.out.println("O Resultado da adição é: "+ resultado);
-
-
-
-                break;
-
-            case 2:
-
-                System.out.print("Primeiro numero: ");
-                 primeiro = in.nextInt();
-
-                System.out.print("Segundo numero: ");
-                 segundo = in.nextInt();
-
-                 resultado = primeiro - segundo;
-
-                System.out.println("O Resultado da subtração é: " + resultado);
-
-                break;
-
-            case 3:
-
-                System.out.print("Primeiro numero: ");
-                primeiro = in.nextInt();
-
-                System.out.print("Segundo numero: ");
-                segundo = in.nextInt();
-
-                resultado = primeiro * segundo;
-
-                System.out.println("O Resultado da multiplicação é: " + resultado);
-
-                break;
-
-            case 4:
-
-                System.out.print("Primeiro numero: ");
-                primeiro = in.nextInt();
-
-                System.out.print("Segundo numero: ");
-                segundo = in.nextInt();
-
-                float resul = (float) primeiro / segundo;
-
-                System.out.println("O Resultado da divisão é: " + resul);
-
-                break;
-
-            default:
-
-                System.out.println("Por Favor Digite uma opção valida");
-        }
-
-        in.close();
-
-    }
-
-    public static void exercicio6(){
-
-        Scanner in = new Scanner(System.in);
-
-
-
-
-
-        System.out.println("1- Pedra");
-        System.out.println("2- Papel");
-        System.out.println("3- Tesoura");
-
-        System.out.print("Jogador 1: ");
-        int jogador1 = in.nextInt();
-        System.out.println("");
-
-        if(jogador1 <=0 || jogador1 >=4){
-
-            System.out.println("por favor digite uma opção valida");
-            System.exit(0);
-
-        }
-
-        System.out.println("1- Pedra");
-        System.out.println("2- Papel");
-        System.out.println("3- Tesoura");
-
-        System.out.print("Jogador 2: ");
-        int jogador2 = in.nextInt();
-        System.out.println("");
-
-        if(jogador2 <=0 || jogador2 >=4){
-
-            System.out.println("por favor digite uma opção valida");
-            System.exit(0);
-
-        }
-
-        if((jogador1==1 && jogador2==3) || (jogador1==2 && jogador2==1) || (jogador1==3 && jogador2==2)){
-
-            System.out.println("Jogador 1 Venceu !!");
-
-        }else if (jogador1 == jogador2){
-
-            System.out.println("Empate !!!");
-
-        }else {
-
-            System.out.println("Jogador 2 Venceu !!");
-
-        }
+        System.out.println("Percentual Votos em Branco: " + pVB + "%");
+        System.out.println("Percentual Votos em Nulos: " + pVN + "%");
+        System.out.println("Percentual Votos em Validos: " + pVV + "%");
 
         in.close();
 
 
-
     }
+
+
+
 
     public static void main(String[] args) {
 
-        exercicio6();
-
+        exercicio1();
 
     }
 
-
 }
+
 
