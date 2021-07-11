@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main extends Pessoas{
 
     static Agenda contatos = new Agenda();
-    static Scanner in = new Scanner(System.in);
+    static Scanner in = new Scanner(System.in).useDelimiter("\n");
 
     public static void main(String[] args) {
         char resp = 's';
@@ -20,6 +20,7 @@ public class Main extends Pessoas{
             System.out.println("4- Imprime Agenda");
             System.out.println("5- Imprime Pessoa");
             System.out.println();
+            System.out.print("Escolha uma opção: ");
 
             opc = in.nextInt();
 
@@ -50,17 +51,19 @@ public class Main extends Pessoas{
                     break;
 
                 case 3:
+
+                case 5:
+
+                    System.out.print("Digite o nome da pessoa que deseja exibir: ");
+                     nome = in.next();
+                     contatos.buscaPessoa(nome);
+                    System.out.println();
+
                     break;
 
                 case 4:
 
                     contatos.imprimeAgenda();
-
-                    break;
-
-                case 5:
-
-                   System.out.println("Digite o indice da pessoa que deseja apagar: ");
 
                     break;
 

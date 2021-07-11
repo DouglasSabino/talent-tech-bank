@@ -36,23 +36,17 @@ public class Agenda extends Pessoas {
 
     }
 
-    public int buscaPessoa(String nome) {
-        int indice = 0;
+    public void buscaPessoa(String nome) {
 
         for (Pessoas pessoa : listaPessoas) {
 
             if (pessoa.getNome().equals(nome)) {
 
-                System.out.print("O indice do registro da pessoa é o: ");
+                System.out.println(pessoa.toString());
 
             }
 
-            indice++;
-
         }
-
-
-        return indice;
 
     }
 
@@ -60,6 +54,7 @@ public class Agenda extends Pessoas {
 
         for(Pessoas pessoa : listaPessoas){
 
+            System.out.println();
             System.out.println(pessoa.toString());
             System.out.println("_________________________________________________");
 

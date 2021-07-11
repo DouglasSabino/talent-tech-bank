@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="732f3276-3bb2-4bb5-88eb-dadc0c2ff58b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dia8/Agenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/dia8/Agenda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dia8/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/dia8/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dia8/Pessoas.java" beforeDir="false" afterPath="$PROJECT_DIR$/dia8/Pessoas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/talent-tech-bank/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/talent-tech-bank/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/talent-tech-bank/testes/testes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/talent-tech-bank/dia4/Exercicios.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/talent-tech-bank/dia4/Exercicios.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/talent-tech-bank/dia5/exercicios.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/talent-tech-bank/dia5/exercicios.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/talent-tech-bank/dia6/exercicios.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/talent-tech-bank/dia6/exercicios.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/talent-tech-bank/dia7/Agenda.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/talent-tech-bank/dia7/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/talent-tech-bank/dia7/Pessoas.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,13 +49,13 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../IntelliJ.Portuguese.Brazil.Dictionary-master/portuguese-brazil_without-accents.dic" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Exercicios (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dia4.Exercicios" />
+  <component name="RunManager" selected="Application.ControleRemoto">
+    <configuration name="ControleRemoto" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dia12.ControleRemoto" />
       <module name="talent-tech-bank" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dia4.*" />
+          <option name="PATTERN" value="dia12.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -57,11 +64,11 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dia7.Main" />
+      <option name="MAIN_CLASS_NAME" value="dia8.Main" />
       <module name="talent-tech-bank" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dia7.*" />
+          <option name="PATTERN" value="dia8.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -70,11 +77,11 @@
       </method>
     </configuration>
     <configuration name="Pessoas" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dia7.Pessoas" />
+      <option name="MAIN_CLASS_NAME" value="dia8.Pessoas" />
       <module name="talent-tech-bank" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dia7.*" />
+          <option name="PATTERN" value="dia8.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -82,12 +89,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="exercicios (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dia6.exercicios" />
+    <configuration name="exercicios" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dia7.exercicios" />
       <module name="talent-tech-bank" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dia6.*" />
+          <option name="PATTERN" value="dia7.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -110,11 +117,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ControleRemoto" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Pessoas" />
-        <item itemvalue="Application.exercicios (1)" />
         <item itemvalue="Application.testes" />
-        <item itemvalue="Application.Exercicios (2)" />
       </list>
     </recent_temporary>
   </component>

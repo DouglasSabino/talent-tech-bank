@@ -7,7 +7,7 @@ public class Pessoas {
     private String nome;
     private int anoNascimento;
     private float altura;
-    static Scanner in = new Scanner(System.in);
+    static Scanner in = new Scanner(System.in).useDelimiter("\n");
 
 
     //METODOS SET
@@ -47,7 +47,7 @@ public class Pessoas {
     @Override
     public  String toString() {
         return
-                "nome= " + nome + '\'' +
+                "nome= " + nome +
                 ", anonascimento= " + anoNascimento +
                 ", altura= " + altura;
     }
