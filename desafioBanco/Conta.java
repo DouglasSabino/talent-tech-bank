@@ -133,12 +133,12 @@ public class Conta extends Cliente {
 
             }
 
-            }
-
-
         }
 
-        public void transferencia(double valor, int numeroConta, int contaRecebedora){
+
+    }
+
+    public void transferencia(double valor, int numeroConta, int contaRecebedora){
         boolean excecao = false;
 
         for(Conta a: Conta.contas){
@@ -165,7 +165,7 @@ public class Conta extends Cliente {
                         }
 
                     }
-            }
+                }
 
             }
         }
@@ -176,133 +176,131 @@ public class Conta extends Cliente {
 
         }
 
-        }
+    }
 
-        public void exibirMinhaConta(int numeroConta){
-            boolean excecao = false;
+    public void exibirMinhaConta(int numeroConta){
+        boolean excecao = false;
 
-            System.out.print("Por favor digite sua senha: ");
-            String senha = in.next();
+        System.out.print("Por favor digite sua senha: ");
+        String senha = in.next();
 
-                for (Conta a : Conta.contas) {
+        for (Conta a : Conta.contas) {
 
-                    if (a.getSenha().equals(senha)) {
+            if (a.getSenha().equals(senha)) {
 
-                        System.out.println(a.toString());
-                        excecao = true;
-                    }
-
-                }
-
-
-            if(excecao == false){
-
-                System.out.println("Operação cancelada, verifique suas informações");
-
+                System.out.println(a.toString());
+                excecao = true;
             }
 
+        }
 
+
+        if(excecao == false){
+
+            System.out.println("Operação cancelada, verifique suas informações");
 
         }
 
-        public void sacar(double valor, int numeroConta){
-         boolean excecao = false;
-         for(Conta b: Conta.contas){
+
+
+    }
+
+    public void sacar(double valor, int numeroConta){
+        boolean excecao = false;
+        for(Conta b: Conta.contas){
 
             if(b.getNumeroConta() == numeroConta){
 
-            System.out.print("Por Favor Digite sua Senha: ");
-            String senha = in.next();
+                System.out.print("Por Favor Digite sua Senha: ");
+                String senha = in.next();
 
-            if(b.senha.equals(senha)){
+                if(b.senha.equals(senha)){
 
-                if(valor < (b.getSaldo() + b.credito)){
+                    if(valor < (b.getSaldo() + b.credito)){
 
-                    b.saldo = b.saldo - valor;
+                        b.saldo = b.saldo - valor;
 
-                    if(b.saldo < 0 && b.saldo > -500){
+                        if(b.saldo < 0 && b.saldo > -500){
 
-                        b.credito = b.credito - Math.abs(b.saldo);
-                        b.saldo = 0;
-                        excecao = true;
-                        System.out.println("Saque concluido com sucesso");
+                            b.credito = b.credito - Math.abs(b.saldo);
+                            b.saldo = 0;
+                            excecao = true;
+                            System.out.println("Saque concluido com sucesso");
+                        }
+
                     }
 
                 }
 
             }
 
-            }
+        }
 
-         }
+        if(excecao == false){
 
-            if(excecao == false){
+            System.out.println("Operação cancelada, verifique suas informações");
 
-                System.out.println("Operação cancelada, verifique suas informações");
+        }
 
-            }
+    }
 
-           }
+    public void creditoDisponivel(int numeroConta){
 
-         public void creditoDisponivel(int numeroConta){
+        for(Conta a: Conta.contas){
 
-            for(Conta a: Conta.contas){
+            if(a.getNumeroConta() == numeroConta){
 
-                if(a.getNumeroConta() == numeroConta){
+                System.out.print("Por favor digite sua senha: ");
+                String s = in.next();
 
-                    System.out.print("Por favor digite sua senha: ");
-                    String s = in.next();
+                if(a.senha.equals(s)){
 
-                    if(a.senha.equals(s)){
+                    System.out.println("Credito Disponivel: " + a.credito);
 
-                        System.out.println("Credito Disponivel: " + a.credito);
+                }else{
 
-                    }else{
+                    System.out.println("Senha Incorreta !!");
 
-                        System.out.println("Senha Incorreta !!");
-
-                    }
                 }
-
             }
 
-         }
+        }
 
-        public void alterarSenha(int numeroConta, String senhaAtual, String novaSenha){
+    }
+
+    public void alterarSenha(int numeroConta, String senhaAtual, String novaSenha){
 
         boolean excecao = false;
 
-         for(Conta a: Conta.contas){
+        for(Conta a: Conta.contas){
 
-              if(a.getNumeroConta() == numeroConta) {
+            if(a.getNumeroConta() == numeroConta) {
 
-                  if(a.getSenha().equals(senhaAtual)){
+                if(a.getSenha().equals(senhaAtual)){
 
-                  System.out.print("Por favor confirme sua nova senha: ");
-                  String confirmaSenha = in.next();
+                    System.out.print("Por favor confirme sua nova senha: ");
+                    String confirmaSenha = in.next();
 
-                  if (novaSenha.equals(confirmaSenha)) {
+                    if (novaSenha.equals(confirmaSenha)) {
 
-                      a.setSenha(confirmaSenha);
-                      excecao = true;
-                      System.out.println("Senha alterada com sucesso !!!");
+                        a.setSenha(confirmaSenha);
+                        excecao = true;
+                        System.out.println("Senha alterada com sucesso !!!");
 
-                  }
+                    }
 
-              }
-               }
-
-           }
-
-            if(excecao == false){
-
-                System.out.println("Operação cancelada, verifique suas informações");
-
+                }
             }
 
+        }
 
-         }
+        if(excecao == false){
+
+            System.out.println("Operação cancelada, verifique suas informações");
+
+        }
+
+
+    }
 
 }
-
-
